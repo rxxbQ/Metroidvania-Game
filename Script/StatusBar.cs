@@ -10,6 +10,11 @@ public class StatusBar : MonoBehaviour
     [SerializeField]
     private Image bar;
 
+    [SerializeField]
+    private GameObject barLength;
+
+    private float xPosition;
+
     //private Slider mp;
     //private Slider stamina;
 
@@ -26,6 +31,7 @@ public class StatusBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        xPosition = barLength.GetComponent<RectTransform>().localPosition.x;
         //hp = transform.GetChild(0).GetComponent<Slider>();
         //mp = transform.GetChild(1).GetComponent<Slider>();
         //stamina = transform.GetChild(2).GetComponent < Slider>();
@@ -35,6 +41,7 @@ public class StatusBar : MonoBehaviour
     void Update()
     {
         HandleStatusBar();
+        BarLevelUp();
     }
 
     private void HandleStatusBar()
@@ -48,5 +55,27 @@ public class StatusBar : MonoBehaviour
     private float Map(float current, float max)
     {
         return (current / max);
+    }
+
+    private void BarLevelUp()
+    {
+        RectTransform rt = barLength.GetComponent<RectTransform>();
+
+        if (barLength.name == "HP")
+        {
+            rt.sizeDelta = new Vector2(Player.Instance.hp.MaxValue * 4, 20);
+            rt.localPosition = new Vector3(xPosition + (Player.Instance.hp.MaxValue * 4 - 160)/2,rt.localPosition.y,0);
+        }
+        if (barLength.name == "MP")
+        {
+            rt.sizeDelta = new Vector2(Player.Instance.mana.MaxValue * 4, 20);
+            rt.localPosition = new Vector3(xPosition + (Player.Instance.mana.MaxValue * 4 - 160) / 2, rt.localPosition.y, 0);
+        }
+        if (barLength.name == "Stamina")
+        {
+            rt.sizeDelta = new Vector2(Player.Instance.stamina.MaxValue * 4, 20);
+            rt.localPosition = new Vector3(xPosition + (Player.Instance.stamina.MaxValue * 4 - 160) / 2, rt.localPosition.y, 0);
+        }
+
     }
 }
