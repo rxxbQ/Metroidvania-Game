@@ -217,7 +217,7 @@ public class Player : Character
     { 
         if (!TakingDamage && !IsDead)
         {
-            if(transform.position.y <= -5f)
+            if(transform.position.y <= -10f)
             {
                 Death();
             }
@@ -586,6 +586,10 @@ public class Player : Character
             GameManager.Instance.NumberKunai += 1;
             Destroy(collision.gameObject);
         }
+        if(collision.gameObject.tag == "Ceiling")
+        {
+            MyAnimator.SetBool("land", true);
+        }
     }
 
     public override void OnTriggerEnter2D(Collider2D other)
@@ -597,6 +601,10 @@ public class Player : Character
         if (other.tag == "SavePoint")
         {
             savePoint = other.GetComponent<IInteraction>();
+        }
+        if (other.tag == "Platform")
+        {
+            MyAnimator.SetBool("land", true);
         }
         base.OnTriggerEnter2D(other);
     }
@@ -612,11 +620,4 @@ public class Player : Character
             savePoint = null;
         }
     }
-
-    //private IEnumerator RestoreStamina()
-    //{
-    //    stamina.CurrentValue += 0.3f;
-    //    yield return null;
-    //}
-
 }
