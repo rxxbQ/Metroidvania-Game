@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7383588616886840861}
   - component: {fileID: 1852500767470600294}
   - component: {fileID: 6278885589326348626}
+  - component: {fileID: 975271815139667008}
   m_Layer: 0
   m_Name: BrokenDoor
   m_TagString: Untagged
@@ -96,3 +97,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.99, y: 2.84}
   m_Direction: 0
+--- !u!114 &975271815139667008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036784500836982348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fbb97c6b22ce2c4da66145de8511b5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageSource:
+  - Kunai
+  - Sword
+  brokenDoor: {fileID: 21300000, guid: b7d2334253cb1b4449fb6ea5d2fc43d1, type: 3}
