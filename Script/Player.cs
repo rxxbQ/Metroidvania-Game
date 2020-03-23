@@ -383,28 +383,28 @@ public class Player : Character
                 downIndex++;
             }
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            if (leftIndex >= leftItem.childCount - 1)
-            {
-                leftIndex = 0;
-            }
-            else
-            {
-                leftIndex++;
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            if (rightIndex >= rightItem.childCount - 1)
-            {
-                rightIndex = 0;
-            }
-            else
-            {
-                rightIndex++;
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.LeftArrow))
+        //{
+        //    if (leftIndex >= leftItem.childCount - 1)
+        //    {
+        //        leftIndex = 0;
+        //    }
+        //    else
+        //    {
+        //        leftIndex++;
+        //    }
+        //}
+        //if (Input.GetKeyDown(KeyCode.RightArrow))
+        //{
+        //    if (rightIndex >= rightItem.childCount - 1)
+        //    {
+        //        rightIndex = 0;
+        //    }
+        //    else
+        //    {
+        //        rightIndex++;
+        //    }
+        //}
     }
 
     private void HandleLayer()
@@ -589,6 +589,20 @@ public class Player : Character
         if(collision.gameObject.tag == "Ceiling")
         {
             MyAnimator.SetBool("land", true);
+        }
+        if (collision.gameObject.tag == "Trap")
+        {
+            hp.CurrentValue -= 0.25f * hp.MaxValue;
+            if (IsDead)
+            {
+                MyAnimator.SetLayerWeight(1, 0);
+                MyAnimator.SetTrigger("die");
+            }
+            else
+            {
+                Vector3 respawnPosition = collision.transform.GetChild(0).GetComponent<Transform>().position;
+                transform.position = new Vector3(respawnPosition.x, respawnPosition.y, respawnPosition.z);
+            } 
         }
     }
 
