@@ -98,6 +98,8 @@ public class Player : Character
         }
     }
 
+    private int respawnChance = 2;
+
     [SerializeField]
     private GameObject healthButton;
     [SerializeField]
@@ -534,11 +536,24 @@ public class Player : Character
 
     public override void Death()
     {
-        MyRigidbody.velocity = Vector2.zero;
-        MyAnimator.SetTrigger("idle");
-        hp.CurrentValue = 0.5f * hp.MaxValue;
-        GameManager.Instance.Gold = (int)Mathf.Round(GameManager.Instance.Gold * 0.5f);
-        transform.position = startPosition;
+        respawnChance--;
+        if (respawnChance >= 1)
+        {
+            MyRigidbody.velocity = Vector2.zero;
+            MyAnimator.SetTrigger("idle");
+            hp.CurrentValue = 0.5f * hp.MaxValue;  
+            //transform.position = startPosition;
+        }
+        else
+        {
+            respawnChance = 2;
+            MyRigidbody.velocity = Vector2.zero;
+            hp.CurrentValue = hp.MaxValue;
+            GameManager.Instance.Gold = (int)Mathf.Round(GameManager.Instance.Gold * 0.5f);
+            MyAnimator.SetTrigger("idle");
+            transform.position = startPosition;
+        }
+        
     }
 
     public void ButtonMove(float buttonMove)
@@ -590,17 +605,21 @@ public class Player : Character
         {
             MyAnimator.SetBool("land", true);
         }
-        if (collision.gameObject.tag == "Trap")
+        if (!IsDead && collision.gameObject.tag == "Trap")
         {
+            Vector3 respawnPosition = collision.transform.GetChild(0).GetComponent<Transform>().position;
             hp.CurrentValue -= 0.25f * hp.MaxValue;
             if (IsDead)
             {
                 MyAnimator.SetLayerWeight(1, 0);
                 MyAnimator.SetTrigger("die");
+                if (respawnChance >= 1)
+                {
+                    transform.position = new Vector3(respawnPosition.x, respawnPosition.y, respawnPosition.z);
+                }
             }
             else
             {
-                Vector3 respawnPosition = collision.transform.GetChild(0).GetComponent<Transform>().position;
                 transform.position = new Vector3(respawnPosition.x, respawnPosition.y, respawnPosition.z);
             } 
         }
