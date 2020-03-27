@@ -607,6 +607,7 @@ public class Player : Character
         }
         if (!IsDead && collision.gameObject.tag == "Trap")
         {
+            MyRigidbody.velocity = Vector2.zero;
             Vector3 respawnPosition = collision.transform.GetChild(0).GetComponent<Transform>().position;
             hp.CurrentValue -= 0.25f * hp.MaxValue;
             if (IsDead)
