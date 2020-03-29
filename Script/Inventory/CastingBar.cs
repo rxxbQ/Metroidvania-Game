@@ -46,7 +46,7 @@ public class CastingBar : MonoBehaviour
             castingBar.fillAmount = Mathf.Lerp(0, 1, progress);
 
             progress += rate * Time.deltaTime;
-            
+
             yield return null;
         }
 

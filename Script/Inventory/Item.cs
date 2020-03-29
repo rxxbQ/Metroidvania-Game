@@ -12,6 +12,7 @@ public class Item : MonoBehaviour
 
     public void ItemUsage()
     {
+        FindObjectOfType<AudioManager>().Play("potion");
         if (type == "Powerup")
         {
             if (id == 2)
