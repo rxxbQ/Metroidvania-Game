@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7964676767297525318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7964676767297525316}
+  - component: {fileID: 7964676767297525319}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7964676767297525316
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7964676767297525318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7964676767297525319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7964676767297525318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05150a575951f3b45a3217d787f5228a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - audioClip: {fileID: 8300000, guid: 3939a3301ddd7c14d9b4104487429a61, type: 3}
+    audioSource: {fileID: 0}
+    name: attack
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioClip: {fileID: 8300000, guid: e6449c02f3c6ff74aa1e127fba623015, type: 3}
+    audioSource: {fileID: 0}
+    name: theme
+    volume: 1
+    pitch: 1
+    loop: 1
+  - audioClip: {fileID: 8300000, guid: 54947e881988b9e44b97c57183c2aca7, type: 3}
+    audioSource: {fileID: 0}
+    name: brokenDoor
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioClip: {fileID: 8300000, guid: d1679f2be4e72c546b4c3422f1af48b2, type: 3}
+    audioSource: {fileID: 0}
+    name: openChest
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioClip: {fileID: 8300000, guid: daf91c8cd229f024bb48e2dcf01b47b5, type: 3}
+    audioSource: {fileID: 0}
+    name: death
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioClip: {fileID: 8300000, guid: 8b074ddc2df5b2146b82a961995b81f1, type: 3}
+    audioSource: {fileID: 0}
+    name: damage
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioClip: {fileID: 8300000, guid: c4d1d4d38ad04014a8bdea6ba80c65ca, type: 3}
+    audioSource: {fileID: 0}
+    name: sleep
+    volume: 1
+    pitch: 1
+    loop: 1
+  - audioClip: {fileID: 8300000, guid: 3ed4db1397608b14697e06ab5d358f6e, type: 3}
+    audioSource: {fileID: 0}
+    name: jump
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioClip: {fileID: 8300000, guid: 170dabb9581bc5b4c85217153a579cdd, type: 3}
+    audioSource: {fileID: 0}
+    name: land
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioClip: {fileID: 8300000, guid: 92abd5cc8523ce3469d775340f50451c, type: 3}
+    audioSource: {fileID: 0}
+    name: run
+    volume: 1
+    pitch: 1
+    loop: 1
+  - audioClip: {fileID: 8300000, guid: fc9700c0128c2a84eba92210291bfd19, type: 3}
+    audioSource: {fileID: 0}
+    name: slide
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioClip: {fileID: 8300000, guid: 471f2b19ac2b4a445a02e75eb221b4c3, type: 3}
+    audioSource: {fileID: 0}
+    name: potion
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioClip: {fileID: 8300000, guid: 6338ec07dbf588c46a01dbea0679c830, type: 3}
+    audioSource: {fileID: 0}
+    name: save
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioClip: {fileID: 8300000, guid: 5b63c88203febdd4b9eb0570e53424ef, type: 3}
+    audioSource: {fileID: 0}
+    name: collapser
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioClip: {fileID: 8300000, guid: 47ca0e5caf545dd4a8480a7f2078120c, type: 3}
+    audioSource: {fileID: 0}
+    name: hiddenRoom
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioClip: {fileID: 8300000, guid: d89edd8e6bf9de24b86976b1348ae704, type: 3}
+    audioSource: {fileID: 0}
+    name: coin
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioClip: {fileID: 8300000, guid: 273b9250aa0dd794291bf7009a73709d, type: 3}
+    audioSource: {fileID: 0}
+    name: levelUp
+    volume: 1
+    pitch: 1
+    loop: 0
