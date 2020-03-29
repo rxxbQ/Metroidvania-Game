@@ -14,6 +14,7 @@ public class Chest : MonoBehaviour,IInteraction
         
         if (opened == false)
         {
+            FindObjectOfType<AudioManager>().Play("openChest");
             GetComponent<Transform>().position = new Vector3(transform.position.x, transform.position.y + 0.45f, transform.position.z);
         }
         opened = true;

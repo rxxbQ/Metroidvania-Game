@@ -29,6 +29,7 @@ public class BrokenDoor : MonoBehaviour
     {
         if (damageSource.Contains(other.tag))
         {
+            FindObjectOfType<AudioManager>().Play("brokenDoor");
             endurance--;
         }
     }

@@ -8,6 +8,14 @@ public class Collapser : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            if (gameObject.tag == "HiddenRoom")
+            {
+                FindObjectOfType<AudioManager>().Play("hiddenRoom");
+            }
+            else
+            {
+                FindObjectOfType<AudioManager>().Play("collapser");
+            }
             Destroy(gameObject);
         }
     }
