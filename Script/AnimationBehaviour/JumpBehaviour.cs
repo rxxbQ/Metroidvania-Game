@@ -18,6 +18,8 @@ public class JumpBehaviour : StateMachineBehaviour
         Player.Instance.Jump = true;
         animator.SetTrigger("wakeup");
 
+        FindObjectOfType<AudioManager>().Play("jump");
+        FindObjectOfType<AudioManager>().Stop("run");
         if (boxCollider == null)
         {
             boxCollider = Player.Instance.GetComponent<BoxCollider2D>();

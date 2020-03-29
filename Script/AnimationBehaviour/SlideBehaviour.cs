@@ -19,6 +19,8 @@ public class SlideBehaviour : StateMachineBehaviour
         Player.Instance.immortal = true;
         Player.Instance.restoreStamina = false;
 
+        FindObjectOfType<AudioManager>().Play("slide");
+
         //if (boxCollider == null)
         //{
         //    boxCollider = Player.Instance.GetComponent<BoxCollider2D>();
@@ -44,7 +46,6 @@ public class SlideBehaviour : StateMachineBehaviour
         Player.Instance.immortal = false;
         Player.Instance.restoreStamina = true;
         
-
         //boxCollider.size = size;
         //boxCollider.offset = offset;
     }

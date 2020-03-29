@@ -13,9 +13,19 @@ public class AttackBehaviour : StateMachineBehaviour
 
         if (animator.tag == "Player")
         {
+            if (animator.GetBool("throw") == false)
+            {
+                Player.Instance.stamina.CurrentValue -= 20;
+                FindObjectOfType<AudioManager>().Play("attack");
+            }
+            
             if (Player.Instance.OnGround)
             {
                 Player.Instance.MyRigidbody.velocity = Vector2.zero;
+            }
+            else
+            {
+                Player.Instance.MyRigidbody.velocity = new Vector2(0, Player.Instance.MyRigidbody.velocity.y);
             }
         }
         
@@ -33,7 +43,7 @@ public class AttackBehaviour : StateMachineBehaviour
         animator.GetComponent<Character>().Attack = false;
         animator.GetComponent<Character>().SwordCollider.enabled = false;
         animator.ResetTrigger("attack");
-        animator.ResetTrigger("throw");
+        animator.SetBool("throw", false);
         Player.Instance.restoreStamina = true;
     }
 

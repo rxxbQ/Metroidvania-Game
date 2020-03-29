@@ -7,6 +7,7 @@ public class DamageBehaviour : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        FindObjectOfType<AudioManager>().Play("damage");
         animator.GetComponent<Character>().TakingDamage = true;
         animator.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
