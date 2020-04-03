@@ -83,7 +83,7 @@ MonoBehaviour:
   - audioClip: {fileID: 8300000, guid: c4d1d4d38ad04014a8bdea6ba80c65ca, type: 3}
     audioSource: {fileID: 0}
     name: sleep
-    volume: 1
+    volume: 0.5
     pitch: 1
     loop: 1
   - audioClip: {fileID: 8300000, guid: 3ed4db1397608b14697e06ab5d358f6e, type: 3}
@@ -143,6 +143,24 @@ MonoBehaviour:
   - audioClip: {fileID: 8300000, guid: 273b9250aa0dd794291bf7009a73709d, type: 3}
     audioSource: {fileID: 0}
     name: levelUp
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioClip: {fileID: 8300000, guid: cee753568d1e09145a8779c7fa641a46, type: 3}
+    audioSource: {fileID: 0}
+    name: enemyAttack
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioClip: {fileID: 8300000, guid: 354d06ac55b73594493ff8c8823e0e21, type: 3}
+    audioSource: {fileID: 0}
+    name: enemyDamage
+    volume: 1
+    pitch: 1
+    loop: 0
+  - audioClip: {fileID: 8300000, guid: 76fb2647a608f054d8e1d98fb986e5e1, type: 3}
+    audioSource: {fileID: 0}
+    name: enemyDeath
     volume: 1
     pitch: 1
     loop: 0
