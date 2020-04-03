@@ -10,7 +10,16 @@ public class DeadBehaviour : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        FindObjectOfType<AudioManager>().Play("death");
+        if (animator.tag == "Player")
+        {
+            FindObjectOfType<AudioManager>().Play("death");
+        }
+        else
+        {
+            FindObjectOfType<AudioManager>().Play("enemyDeath");
+        }
+        
+        Player.Instance.MyRigidbody.velocity = Vector2.zero;
         deathTimer = 0;
     }
 

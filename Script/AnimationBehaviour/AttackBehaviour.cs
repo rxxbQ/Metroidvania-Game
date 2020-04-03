@@ -9,16 +9,16 @@ public class AttackBehaviour : StateMachineBehaviour
     {
         animator.GetComponent<Character>().Attack = true;
         animator.SetFloat("speed", 0);
-        Player.Instance.restoreStamina = false;
 
         if (animator.tag == "Player")
         {
+            Player.Instance.restoreStamina = false;
             if (animator.GetBool("throw") == false)
             {
                 Player.Instance.stamina.CurrentValue -= 20;
                 FindObjectOfType<AudioManager>().Play("attack");
             }
-            
+
             if (Player.Instance.OnGround)
             {
                 Player.Instance.MyRigidbody.velocity = Vector2.zero;
@@ -28,7 +28,13 @@ public class AttackBehaviour : StateMachineBehaviour
                 Player.Instance.MyRigidbody.velocity = new Vector2(0, Player.Instance.MyRigidbody.velocity.y);
             }
         }
-        
+        if (animator.tag == "Enemy")
+        {
+            if (animator.GetBool("throw") == false)
+            {
+                FindObjectOfType<AudioManager>().Play("enemyAttack");
+            }
+        }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -44,7 +50,11 @@ public class AttackBehaviour : StateMachineBehaviour
         animator.GetComponent<Character>().SwordCollider.enabled = false;
         animator.ResetTrigger("attack");
         animator.SetBool("throw", false);
-        Player.Instance.restoreStamina = true;
+
+        if (animator.tag == "Player")
+        {
+            Player.Instance.restoreStamina = true;
+        }   
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
