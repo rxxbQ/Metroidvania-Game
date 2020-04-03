@@ -143,13 +143,13 @@ public class Enemy : Character
             {
                 ChangeDirection();
             }
-            else if (currentState is ThrowState)
+            else if (currentState is ThrowState && (Mathf.Abs(transform.position.x - Target.transform.position.x) > 14))
             {
                 Target = null;
                 Player.Instance.InBattle = false;
                 ChangeState(new IdleState());
             }
-            
+
         }
         
     }
@@ -187,14 +187,21 @@ public class Enemy : Character
         ChangeState(new PatrolState());
     }
 
-    public override IEnumerator TakeDamage()
+    public override IEnumerator TakeDamage(string damageSource)
     {
         if (!healthCanvas.isActiveAndEnabled)
         {
             healthCanvas.enabled = true;
         }
-
-        hp.CurrentValue = hp.CurrentValue - (int)Mathf.Round(Player.Instance.attackDamage * (1 - (0.01f * defence)));
+        if (damageSource == "Sword")
+        {
+            hp.CurrentValue = hp.CurrentValue - (int)Mathf.Round(Player.Instance.attackDamage * (1 - (0.01f * defence)));
+        }
+        else if(damageSource == "Kunai")
+        {
+            hp.CurrentValue = hp.CurrentValue - (int)Mathf.Round(Player.Instance.attackDamage * 0.5f * (1 - (0.01f * defence)));
+        }
+        
 
         if (!IsDead)
         {
@@ -234,6 +241,7 @@ public class Enemy : Character
         dropItem = true;
         healthCanvas.enabled = false;
         Destroy(gameObject);
+        Player.Instance.InBattle = false;
         //MyAnimator.ResetTrigger("die");
         //MyAnimator.ResetTrigger("idle");
         //hp.CurrentValue = hp.MaxValue;

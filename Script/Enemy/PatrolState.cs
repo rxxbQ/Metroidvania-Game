@@ -33,7 +33,7 @@ public class PatrolState : IEnemyState
 
     public void OnTriggerEnter(Collider2D other)
     {
-        if (other.tag == "Kunai")
+        if (other.tag == "Kunai" || other.tag == "Sword")
         {
             enemy.Target = Player.Instance.gameObject;
         }

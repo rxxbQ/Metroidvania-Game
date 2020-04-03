@@ -55,7 +55,7 @@ public class ThrowState : IEnemyState
         if (canThrow)
         {
             canThrow = false;
-            enemy.MyAnimator.SetTrigger("throw");
+            enemy.MyAnimator.SetBool("throw",true);
         }
     } 
 }

@@ -6,10 +6,15 @@ public class EnemySight : MonoBehaviour
 {
     [SerializeField]
     private Enemy enemy;
+    private bool sightBlocked = false;
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (enemy.Target == null && other.tag == "Obstacle")
+        {
+            sightBlocked = true;
+        }
+        if (!sightBlocked && other.tag == "Player")
         {
             enemy.Target = other.gameObject;
         }
@@ -20,6 +25,10 @@ public class EnemySight : MonoBehaviour
         if (other.tag == "Player")
         {
             enemy.Target = null;
+        }
+        if (other.tag == "Obstacle")
+        {
+            sightBlocked = false;
         }
     }
 }
