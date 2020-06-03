@@ -16,7 +16,9 @@ Attack -> increase attack damage
 Defence -> increase defence to block more damage from enemies
 Luck -> increase drop rate
 
-UI: HP -> When hp goes down to zero, you have one chance to revive from the same spot you died by having half of your maximum hp as your current hp. If you die again you will respawn from the save point and lose half of your current gold.
+UI: 
+
+     HP -> When hp goes down to zero, you have one chance to revive from the same spot you died by having half of your maximum hp as your current hp. If you die again you will respawn from the save point and lose half of your current gold.
 
     Mana -> You can use mana to trade for more ranged weapons.
     
