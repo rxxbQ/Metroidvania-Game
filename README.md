@@ -1,5 +1,5 @@
 # 2D-Platform-Souls-like-Game
-Controls:\n 
+Controls: 
 'A'-left 'D'-right 
 'Space'-jump 'ctrl'-slide 'J'-melee attack 'k'-ranged attack
 'Tab'-open inventory 'F'-interact
