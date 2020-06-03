@@ -17,6 +17,9 @@ Defence -> increase defence to block more damage from enemies
 Luck -> increase drop rate
 
 UI: HP -> When hp goes down to zero, you have one chance to revive from the same spot you died by having half of your maximum hp as your current hp. If you die again you will respawn from the save point and lose half of your current gold.
+
     Mana -> You can use mana to trade for more ranged weapons.
+    
     Stamina ->  Stamina will regenerate itself continuously until it becomes full. Each time you slide or attack, you reduce stamina. When you stamina gose down to zero, you are not able to attack until it becomes full. However, even you are not able to attck, you are still able to slide. 
+    
     Items -> It takes 1.5s to consume potions or powerups. During that time it you take damage then the casting will be canceled. You can use items by opening inventory then click on the items. Or you can select items to use by '↑', '↓' then quickcast by 'Q', 'E'.
