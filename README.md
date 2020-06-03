@@ -1,16 +1,12 @@
 # 2D-Platform-Souls-like-Game
-Controls: 'A'-left
-          'D'-right 
-          'Space'-jump 
-          'ctrl'-slide
-          'J'-melee attack
-          'k'-ranged attack
-          'Tab'-open inventory
-          'F'-interact
-          'Q'-quickcast potions
-          'E'-quickcast powerups
-          '↑'-switch potions
-          '↓'-switch powerups
+Controls: 
+'A'-left 'D'-right 
+'Space'-jump 'ctrl'-slide 'J'-melee attack 'k'-ranged attack
+'Tab'-open inventory 'F'-interact
+'Q'-quickcast potions
+'E'-quickcast powerups
+'↑'-switch potions
+'↓'-switch powerups
           
 Level Up: Use coins to level up at the save points. Each level requires more coins to level up. You can earn coins by opening chest or defeating enemies. You can choose to level up one of the following attributes at each level.
 Health -> increase maximum HP
