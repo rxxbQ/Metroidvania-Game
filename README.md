@@ -1,24 +1,31 @@
 # 2D-Platform-Souls-like-Game
 Controls: 
-'A'-left 'D'-right 
-'Space'-jump 'ctrl'-slide 'J'-melee attack 'k'-ranged attack
-'Tab'-open inventory 'F'-interact
-'Q'-quickcast potions
-'E'-quickcast powerups
-'↑'-switch potions
-'↓'-switch powerups
+
+          'A'-left 
+          'D'-right 
+          'Space'-jump 
+          'ctrl'-slide 
+          'J'-melee attack 
+          'k'-ranged attack
+          'Tab'-open inventory 
+          'F'-interact
+          'Q'-quickcast potions
+          'E'-quickcast powerups
+          '↑'-switch potions
+          '↓'-switch powerups
           
 Level Up: Use coins to level up at the save points. Each level requires more coins to level up. You can earn coins by opening chest or defeating enemies. You can choose to level up one of the following attributes at each level.
-Health -> increase maximum HP
-Mana -> increase maximum MP
-Stamina -> increase maximum stamina
-Attack -> increase attack damage
-Defence -> increase defence to block more damage from enemies
-Luck -> increase drop rate
+
+          Health -> increase maximum HP
+          Mana -> increase maximum MP
+          Stamina -> increase maximum stamina
+          Attack -> increase attack damage
+          Defence -> increase defence to block more damage from enemies
+          Luck -> increase drop rate
 
 UI: 
 
-     HP -> When hp goes down to zero, you have one chance to revive from the same spot you died by having half of your maximum hp as your current hp. If you die again you will respawn from the save point and lose half of your current gold.
+    HP -> When hp goes down to zero, you have one chance to revive from the same spot you died by having half of your maximum hp as your current hp. If you die again you will respawn from the save point and lose half of your current gold.
 
     Mana -> You can use mana to trade for more ranged weapons.
     
