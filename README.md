@@ -1,4 +1,4 @@
-# 2D-Platform-Souls-like-Game
+# Metroidvania-Game
 Controls: 
 
           'A'-left 
