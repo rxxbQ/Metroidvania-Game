@@ -17,7 +17,7 @@
           '↑'-switch potions
           '↓'-switch powerups
           
-##Level Up 
+## Level Up 
 Use coins to level up at the save points. Each level requires more coins to level up. You can earn coins by opening chest or defeating enemies. You can choose to level up one of the following attributes at each level.
 
           Health -> increase maximum HP
