@@ -1,5 +1,6 @@
 # Unity Metroidvania-Game
-Unity Project
+```Metroidvania```
+```Platformer``` <br/>
 
 Controls: 
 
