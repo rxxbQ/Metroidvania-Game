@@ -2,7 +2,7 @@
 ```Metroidvania```
 ```Platformer``` <br/>
 
-Controls: 
+## Controls 
 
           'A'-left 
           'D'-right 
@@ -17,7 +17,8 @@ Controls:
           '↑'-switch potions
           '↓'-switch powerups
           
-Level Up: Use coins to level up at the save points. Each level requires more coins to level up. You can earn coins by opening chest or defeating enemies. You can choose to level up one of the following attributes at each level.
+##Level Up 
+Use coins to level up at the save points. Each level requires more coins to level up. You can earn coins by opening chest or defeating enemies. You can choose to level up one of the following attributes at each level.
 
           Health -> increase maximum HP
           Mana -> increase maximum MP
@@ -26,7 +27,7 @@ Level Up: Use coins to level up at the save points. Each level requires more coi
           Defence -> increase defence to block more damage from enemies
           Luck -> increase drop rate
 
-UI: 
+## UI 
 
     HP -> When hp goes down to zero, you have one chance to revive from the same spot you died by having half of your maximum hp as your current hp. If you die again you will respawn from the save point and lose half of your current gold.
 
