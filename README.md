@@ -1,6 +1,7 @@
 # Unity Metroidvania-Game
 ```Metroidvania```
 ```Platformer``` <br/>
+All source codes are under Script <br/>
 ## GamePlay
 Jump over all the traps and defeat the enemies you see on the path. Explore the map carefully, you may find the hidden area and the hidden treasure
 
